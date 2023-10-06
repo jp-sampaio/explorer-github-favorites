@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --ff-primary: 'Poppins', sans-serif;
+  --text-color: #303030;
+  --bg-primary: rgb(220, 220, 245);
+
+  --hue: 194;
+  --primary-color: hsl(var(--hue), 100%, 63%);
+}
+
+body {
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: var(--bg-primary);
+}
+
+body * {
+  font-family: var(--ff-primary);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app {
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2.5rem 0;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-size: 2rem;
+}
+
+header .search {
+  display: flex;
+  align-items: center;
+}
+
+header .search #input-search {
+  height: 3.2rem;
+  border: 1px solid #ccd;
+  padding: 0 .8rem;
+  border-radius: .4rem 0 0 .4rem;
+}
+
+header .search .add {
+  height: 3.2rem;
+  background-color: var(--primary-color);
+  border: none;
+  border-radius: 0 .4rem .4rem 0;
+  padding: 0 1rem;
+  cursor: pointer;
+  transition: filter .2s linear;
+}
+
+header .search .add:hover {
+  filter: brightness(1.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  box-shadow: 0 1.5rem 2rem -1rem rgba(0, 0, 0, 0.308);
+}
+
+table * {
+  font-size: 1.4rem;
+  color: var(--text-color);
+}
+
+table th {
+  background-color: var(--primary-color);
+  text-align: left;
+  font-weight: 400;
+  padding: 1.5rem;
+}
+
+table th:first-child {
+  border-top-left-radius: .4rem;
+}
+
+table th:last-child {
+  border-top-right-radius: .4rem;
+}
+
+table tr:nth-child(odd) {
+  background: #ececec;
+}
+
+table tr:nth-child(even) {
+  background: #dddcdc;
+}
+
+table td {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+table td.user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+table td.user img {
+  width: 5rem;
+  height: 5rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+table td.user a {
+  text-decoration: none;
+}
+
+table td.user a p {
+  font-weight: 700;
+}
+
+table td .remove {
+  background: none;
+  border: none;
+  color: red;
+  cursor: pointer;
+  transition: transform .2s ease;
+}
+
+table td .remove:hover {
+  transform: scale(1.2)
+}
